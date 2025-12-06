@@ -98,61 +98,74 @@ body{
 
 /* شبكة الأيقونات */
 .grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:14px;
-    margin-top:22px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(90px,1fr));
+    gap: 14px;
+    padding: 10px 0;
+    justify-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.6s forwards;
+    animation-delay: 0.2s;
 }
 
+/* صندوق الأيقونة */
 .icon-box{
+    width: 100px;
+    height: 100px;
+
     background:#161616;
-    border-radius:14px;
-    padding:16px 0;
+    border-radius:16px;
     border:1px solid rgba(255,215,0,.15);
-    transition:.2s;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    transition:0.3s;
 }
 
 .icon-box:hover{
-    transform:scale(1.08);
+    transform: scale(1.08);
     background:#1f1f1f;
+    box-shadow: 0 0 12px rgba(255,215,0,0.7); /* توهّج ذهبي */
 }
 
 .icon-box:active{
-    transform:scale(.94);
+    transform: scale(.94);
 }
 
+/* شكل الأيقونة نفسها */
 .icon{
     font-size:34px;
 }
 
+/* اسم المنصّة */
 .label{
-    display:block;
-    font-size:12px;
     margin-top:6px;
+    font-size:12px;
     color:#eee;
 }
 
-</style>
-</head>
-<body>
+/* توسيط الصف الأخير (7 و8) بالكامل */
+.grid > a:nth-last-child(2){
+    grid-column: 2 / 3; /* الأيقونة 7 تحت المنتصف */
+    justify-self: end;   /* جنب 4 و5 */
+}
 
-<div class="card">
+.grid > a:last-child{
+    grid-column: 2 / 3; /* الأيقونة 8 جنب 7 */
+    justify-self: start; /* جنب 7 */
+}
 
-<div class="avatar">HG</div>
-
-<div class="name">
-    حازم جابر سليمان
-    <span class="stamp">LEGAL VIP</span>
-</div>
-
-<div class="signature">Hazem Souliman ⚖</div>
-
-<div class="role">محامٍ ومستشار قانوني</div>
-
-<div class="box">📞 0201018167903</div>
-<div class="box">📧 hazemsouliman@yahoo.com</div>
-
-<div class="grid">
+/* حركة انزلاق عند تحميل الصفحة */
+@keyframes slideIn{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 <a class="icon-box" href="tel:+20201018167903">
 <i class="fa-solid fa-phone icon" style="color:#FFD700"></i>
