@@ -2,125 +2,196 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>Hazem Gaber Souliman</title>
+<title>Hazem Gaber Souliman | NFC</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- أيقونات رسمية لكل المنصات -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 body{
-    background:#0b0b0b;
+    margin:0;
+    background:
+      linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.88)),
+      url("https://upload.wikimedia.org/wikipedia/commons/2/2b/Scales_of_Justice_02.svg");
+    background-size:350px;
+    background-repeat:no-repeat;
+    background-position:center 140px;
     font-family:Arial, sans-serif;
 }
 
 .card{
     max-width:420px;
     margin:30px auto;
-    background:#111;
+    padding:22px;
+    background:#0f0f0f;
     border-radius:18px;
-    padding:25px;
-    box-shadow:0 0 26px rgba(255,215,0,.15);
-}
-
-h1{
-    color:#ffd700;
+    box-shadow:0 0 30px rgba(255,215,0,.15);
     text-align:center;
-    margin-bottom:4px;
 }
 
-h2{
-    color:#aaa;
-    text-align:center;
-    font-size:15px;
-    margin-top:0;
-}
-
-.box{
-    background:#1a1a1a;
-    color:#f0f0f0;
-    padding:8px;
-    text-align:center;
-    border-radius:8px;
-    margin:7px 0;
-}
-
-.link{
+/* صورة رمزية */
+.avatar{
+    width:110px;
+    height:110px;
+    margin:auto;
+    border-radius:50%;
+    background:linear-gradient(135deg,#222,#000);
     display:flex;
     align-items:center;
-    gap:13px;
-    padding:13px;
-    margin:8px 0;
-    background:#161616;
+    justify-content:center;
+    font-size:38px;
+    color:#FFD700;
+    border:3px solid gold;
+    box-shadow:0 0 12px gold;
+}
+
+/* الاسم */
+.name{
+    margin:12px 0 4px;
+    font-size:22px;
+    color:#FFD700;
+    position:relative;
+}
+
+/* ختم ذهبي */
+.stamp{
+    position:absolute;
+    right:-16px;
+    top:-18px;
+    background:transparent;
+    border:2px solid gold;
+    color:gold;
+    font-size:9px;
+    padding:3px 6px;
+    border-radius:50%;
+    transform:rotate(-16deg);
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1) rotate(-16deg)}
+    50%{transform:scale(1.08) rotate(-16deg)}
+    100%{transform:scale(1) rotate(-16deg)}
+}
+
+/* التوقيع */
+.signature{
+    margin-top:4px;
+    font-family:cursive;
+    color:#aaa;
+    font-size:18px;
+}
+
+.role{
+    color:#888;
+    font-size:14px;
+}
+
+/* الهاتف + الإيميل */
+.box{
+    background:#141414;
     color:#fff;
-    border-radius:12px;
-    text-decoration:none;
+    margin:8px;
+    padding:7px;
+    border-radius:6px;
+}
+
+/* شبكة الأيقونات */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:22px;
+}
+
+.icon-box{
+    background:#161616;
+    border-radius:14px;
+    padding:16px 0;
     border:1px solid rgba(255,215,0,.15);
     transition:.2s;
 }
 
-.link:hover{
-    transform:scale(1.04);
-    background:#202020;
+.icon-box:hover{
+    transform:scale(1.08);
+    background:#1f1f1f;
 }
 
-.link:active{
-    transform:scale(0.96);
+.icon-box:active{
+    transform:scale(.94);
 }
 
 .icon{
-    font-size:22px;
+    font-size:34px;
 }
+
+.label{
+    display:block;
+    font-size:12px;
+    margin-top:6px;
+    color:#eee;
+}
+
 </style>
 </head>
 <body>
 
 <div class="card">
 
-<h1>حازم جابر سليمان</h1>
-<h2>⚖ محامٍ ومستشار قانوني</h2>
+<div class="avatar">HG</div>
+
+<div class="name">
+    حازم جابر سليمان
+    <span class="stamp">LEGAL VIP</span>
+</div>
+
+<div class="signature">Hazem Souliman ⚖</div>
+
+<div class="role">محامٍ ومستشار قانوني</div>
 
 <div class="box">📞 0201018167903</div>
 <div class="box">📧 hazemsouliman@yahoo.com</div>
 
-<a class="link" href="tel:+0201018167903">
+<div class="grid">
+
+<a class="icon-box" href="tel:+20201018167903">
 <i class="fa-solid fa-phone icon" style="color:#FFD700"></i>
-اتصال مباشر
+<span class="label">Call</span>
 </a>
 
-<a class="link" href="mailto:hazemsouliman@yahoo.com">
+<a class="icon-box" href="mailto:hazemsouliman@yahoo.com">
 <i class="fa-solid fa-envelope icon" style="color:#FFD700"></i>
-إرسال بريد
+<span class="label">Email</span>
 </a>
 
-<a class="link" href="https://wa.me/0201018167903">
+<a class="icon-box" href="https://wa.me/20201018167903">
 <i class="fa-brands fa-whatsapp icon" style="color:#25D366"></i>
-WhatsApp
+<span class="label">WhatsApp</span>
 </a>
 
-<a class="link" href="https://www.facebook.com/share/1A8ABN8DUT/">
+<a class="icon-box" href="https://www.facebook.com/share/1A8ABN8DUT/">
 <i class="fa-brands fa-facebook icon" style="color:#1877F2"></i>
-Facebook
+<span class="label">Facebook</span>
 </a>
 
-<a class="link" href="https://www.instagram.com/prof_hazem_jaber">
+<a class="icon-box" href="https://www.instagram.com/prof_hazem_jaber">
 <i class="fa-brands fa-instagram icon" style="color:#E4405F"></i>
-Instagram
+<span class="label">Instagram</span>
 </a>
 
-<a class="link" href="https://www.linkedin.com/in/hazem-souliman-law">
+<a class="icon-box" href="https://www.linkedin.com/in/hazem-souliman-law">
 <i class="fa-brands fa-linkedin icon" style="color:#0A66C2"></i>
-LinkedIn
+<span class="label">LinkedIn</span>
 </a>
 
-<a class="link" href="https://www.tiktok.com/@prof_hazem_jaber">
-<i class="fa-brands fa-tiktok icon" style="color:#ffffff"></i>
-TikTok
+<a class="icon-box" href="https://www.tiktok.com/@prof_hazem_jaber">
+<i class="fa-brands fa-tiktok icon" style="color:white"></i>
+<span class="label">TikTok</span>
 </a>
 
-<a class="link" href="https://x.com/HazemSouliman">
-<i class="fa-brands fa-x-twitter icon" style="color:#eaeaea"></i>
-X
+<a class="icon-box" href="https://x.com/HazemSouliman">
+<i class="fa-brands fa-x-twitter icon" style="color:#eee"></i>
+<span class="label">X</span>
 </a>
 
 <div class="en">
