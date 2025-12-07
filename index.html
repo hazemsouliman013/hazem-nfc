@@ -52,12 +52,12 @@ body{
     text-align:center;
 }
 
-/* AVATAR - تم تعديل الحجم */
+/* AVATAR - التعديلات هنا */
 
 .avatar{
-    /* تم زيادة الحجم */
-    width:200px; 
-    height:200px;
+    /* ✅ زيادة الحجم لـ 220px لتحقيق تأثير "الزووم أوت" */
+    width:220px; 
+    height:220px;
     margin:8px auto 12px;
     border-radius:50%;
     border:4px solid gold;
@@ -70,8 +70,8 @@ body{
     width:100%;
     height:100%;
     object-fit:cover;                
-    /* ✅ التعديل الدقيق: تم تغيير موضع الصورة إلى 30% لتركيز أفضل على البدلة والشعر معاً */
-    object-position:center 30%;     
+    /* ✅ تغيير الموضع إلى 20% (أقل من 30% السابقة) لـ "سحب" الصورة للأسفل أكثر وإظهار البدلة والشعر معًا دون قص كبير */
+    object-position:center 20%;     
 }
 
 /* NAME */
@@ -182,9 +182,9 @@ a{ text-decoration:none; }
 @media(max-width:480px){
 
 .avatar{
-    /* تم زيادة حجم الصورة على الجوال أيضاً */
-    width:160px;
-    height:160px;
+    /* تم زيادة حجم الصورة على الجوال أيضاً لـ 180px */
+    width:180px;
+    height:180px;
 }
 
 .icon-box{
