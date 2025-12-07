@@ -13,39 +13,49 @@ body{
     background:
       linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.88)),
       url("https://upload.wikimedia.org/wikipedia/commons/2/2b/Scales_of_Justice_02.svg");
+
     background-size:350px;
     background-repeat:no-repeat;
     background-position:center 140px;
     font-family:Arial, sans-serif;
 }
 
+/* ================= CARD ================= */
+
 .card{
     max-width:420px;
     margin:30px auto;
     padding:22px;
+
     background:#0f0f0f;
     border-radius:18px;
     box-shadow:0 0 30px rgba(255,215,0,.15);
     text-align:center;
 }
 
-/* صورة رمزية */
+/* ================= AVATAR ================= */
+
 .avatar{
     width:110px;
     height:110px;
     margin:auto;
+
     border-radius:50%;
     background:linear-gradient(135deg,#222,#000);
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     font-size:38px;
     color:#FFD700;
+
     border:3px solid gold;
     box-shadow:0 0 12px gold;
 }
 
-/* الاسم */
+/* ================= NAME ================= */
+
 .name{
     margin:12px 0 4px;
     font-size:22px;
@@ -53,17 +63,18 @@ body{
     position:relative;
 }
 
-/* ختم ذهبي */
 .stamp{
     position:absolute;
     right:-16px;
     top:-18px;
-    background:transparent;
+
     border:2px solid gold;
     color:gold;
     font-size:9px;
+
     padding:3px 6px;
     border-radius:50%;
+
     transform:rotate(-16deg);
     animation:pulse 2s infinite;
 }
@@ -74,7 +85,6 @@ body{
     100%{transform:scale(1) rotate(-16deg)}
 }
 
-/* التوقيع */
 .signature{
     margin-top:4px;
     font-family:cursive;
@@ -87,136 +97,185 @@ body{
     font-size:14px;
 }
 
-/* الهاتف + الإيميل */
 .box{
     background:#141414;
     color:#fff;
     margin:8px;
     padding:7px;
+
     border-radius:6px;
 }
 
+/* ================= GRID ================= */
 
-/* شبكة الأيقونات */
 .grid{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(90px,1fr));
-    gap: 14px;
-    padding: 10px 0;
-    justify-items: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideIn 0.6s forwards;
-    animation-delay: 0.2s;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:22px;
+    justify-items:center;
 }
 
-/* صندوق الأيقونة */
-.icon-box{
-    width: 100px;
-    height: 100px;
+/* ================= ICON BOX ================= */
 
-    background:#161616;
-    border-radius:16px;
+.icon-box{
+    width:100px;
+    height:100px;
+
+    background:rgba(22,22,22,.55);
+    backdrop-filter:blur(7px);
+    -webkit-backdrop-filter:blur(7px);
+
+    border-radius:14px;
     border:1px solid rgba(255,215,0,.15);
-    
+
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
 
-    transition:0.3s;
+    transition:.25s ease;
+    overflow:hidden;
+
+    position:relative;
 }
 
+/* Hover */
 .icon-box:hover{
-    transform: scale(1.08);
+    transform:scale(1.08);
     background:#1f1f1f;
-    box-shadow: 0 0 12px rgba(255,215,0,0.7); /* توهّج ذهبي */
+    box-shadow:0 0 14px rgba(255,215,0,.45);
 }
 
+/* Press */
 .icon-box:active{
-    transform: scale(.94);
+    transform:scale(.94);
 }
 
-/* شكل الأيقونة نفسها */
+/* Ripple */
+.icon-box::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    width:0;
+    height:0;
+
+    border-radius:50%;
+    background:radial-gradient(circle,
+                rgba(255,215,0,.4),
+                transparent 55%);
+
+    transform:translate(-50%,-50%);
+    opacity:0;
+}
+
+.icon-box:active::after{
+    animation:ripple .45s ease-out;
+}
+
+@keyframes ripple{
+    from{
+        width:0;
+        height:0;
+        opacity:.6;
+    }
+    to{
+        width:260px;
+        height:260px;
+        opacity:0;
+    }
+}
+
+/* ================= ICON ================= */
+
 .icon{
     font-size:34px;
 }
 
-/* اسم المنصّة */
+/* ================= LABEL ================= */
+
 .label{
-    margin-top:6px;
+    display:block;
     font-size:12px;
+    margin-top:6px;
     color:#eee;
 }
 
-/* توسيط الصف الأخير (7 و8) بالكامل */
-.grid > a:nth-last-child(2){
-    grid-column: 2 / 3; /* الأيقونة 7 تحت المنتصف */
-    justify-self: end;   /* جنب 4 و5 */
-}
+/* ================= LAST ROW CENTER ================= */
 
+/* تزحيف الأيقونتين الأخيرتين لنص عمود للداخل */
+.grid > a:nth-last-child(2),
 .grid > a:last-child{
-    grid-column: 2 / 3; /* الأيقونة 8 جنب 7 */
-    justify-self: start; /* جنب 7 */
+    transform:translateX(17%);
 }
 
-/* حركة انزلاق عند تحميل الصفحة */
-@keyframes slideIn{
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="avatar">HG</div>
+
+<div class="name">
+    حازم جابر سليمان
+    <span class="stamp">LEGAL VIP</span>
+</div>
+
+<div class="signature">Hazem Souliman ⚖</div>
+
+<div class="role">محامٍ ومستشار قانوني</div>
+
+<div class="box">📞 0201018167903</div>
+<div class="box">📧 hazemsouliman@yahoo.com</div>
+
+<div class="grid">
 
 <a class="icon-box" href="tel:+20201018167903">
-<i class="fa-solid fa-phone icon" style="color:#FFD700"></i>
-<span class="label">Call</span>
+    <i class="fa-solid fa-phone icon" style="color:#FFD700"></i>
+    <span class="label">Call</span>
 </a>
 
 <a class="icon-box" href="mailto:hazemsouliman@yahoo.com">
-<i class="fa-solid fa-envelope icon" style="color:#FFD700"></i>
-<span class="label">Email</span>
+    <i class="fa-solid fa-envelope icon" style="color:#FFD700"></i>
+    <span class="label">Email</span>
 </a>
 
 <a class="icon-box" href="https://wa.me/20201018167903">
-<i class="fa-brands fa-whatsapp icon" style="color:#25D366"></i>
-<span class="label">WhatsApp</span>
+    <i class="fa-brands fa-whatsapp icon" style="color:#25D366"></i>
+    <span class="label">WhatsApp</span>
 </a>
 
 <a class="icon-box" href="https://www.facebook.com/share/1A8ABN8DUT/">
-<i class="fa-brands fa-facebook icon" style="color:#1877F2"></i>
-<span class="label">Facebook</span>
+    <i class="fa-brands fa-facebook icon" style="color:#1877F2"></i>
+    <span class="label">Facebook</span>
 </a>
 
 <a class="icon-box" href="https://www.instagram.com/prof_hazem_jaber">
-<i class="fa-brands fa-instagram icon" style="color:#E4405F"></i>
-<span class="label">Instagram</span>
+    <i class="fa-brands fa-instagram icon" style="color:#E4405F"></i>
+    <span class="label">Instagram</span>
 </a>
 
 <a class="icon-box" href="https://www.linkedin.com/in/hazem-souliman-law">
-<i class="fa-brands fa-linkedin icon" style="color:#0A66C2"></i>
-<span class="label">LinkedIn</span>
+    <i class="fa-brands fa-linkedin icon" style="color:#0A66C2"></i>
+    <span class="label">LinkedIn</span>
 </a>
 
 <a class="icon-box" href="https://www.tiktok.com/@prof_hazem_jaber">
-<i class="fa-brands fa-tiktok icon" style="color:white"></i>
-<span class="label">TikTok</span>
+    <i class="fa-brands fa-tiktok icon" style="color:white"></i>
+    <span class="label">TikTok</span>
 </a>
 
 <a class="icon-box" href="https://x.com/HazemSouliman">
-<i class="fa-brands fa-x-twitter icon" style="color:#eee"></i>
-<span class="label">X</span>
+    <i class="fa-brands fa-x-twitter icon" style="color:#eee"></i>
+    <span class="label">X</span>
 </a>
 
-<div class="en">
-<h1>Hazem Gaber Souliman</h1>
-<h2>Lawyer & Legal Consultant</h2>
-
-<p>📞 +20 201018167903</p>
-<p>📧 hazemsouliman@yahoo.com</p>
-<p>📍 Zagazig – Sharkia – Egypt</p>
 </div>
-    
+
 </div>
 
 </body>
