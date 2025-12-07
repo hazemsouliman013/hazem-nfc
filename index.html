@@ -1,185 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-<title>Hazem Jaber Souliman | NFC</title>
-
+<title>Hazem Souliman - NFC Card</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 body{
     margin:0;
-    font-family: Arial, sans-serif;
-    background:black;
+    min-height:100vh;
+    background:
+      linear-gradient(180deg,#0a0a0a,#141414,#000);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, Helvetica, sans-serif;
 }
-
-/* BACKGROUND VIDEO */
-
-.video-bg{
-    position:fixed;
-    inset:0;
-    overflow:hidden;
-    z-index:-2;
-}
-
-.video-bg video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.80);
-    z-index:-1;
-}
-
-/* MAIN CARD */
 
 .card{
-    max-width:420px;
-    margin:20px auto;
-    padding:20px;
-    background:rgba(15,15,15,.85);
-    backdrop-filter:blur(3px);
-    border-radius:18px;
-    box-shadow:0 0 30px rgba(255,215,0,.25);
+    width:350px;
+    padding:30px 20px 35px;
+    border-radius:26px;
     text-align:center;
+    background:
+      linear-gradient(160deg,#111,#000);
+    box-shadow:
+      0 0 26px rgba(212,175,55,.35),
+      inset 0 0 18px rgba(255,255,255,.04);
 }
 
-/* AVATAR */
-
+/* ===== Avatar Frame ===== */
 .avatar{
-    width:170px;
-    height:170px;
-    margin:8px auto 12px;
+    width:200px;
+    height:200px;
+    margin:0 auto 15px;
     border-radius:50%;
-    border:4px solid gold;
-    box-shadow:0 0 22px rgba(255,215,0,.85);
     overflow:hidden;
-    background:#000;
+    border:3px solid #d4af37;
+    box-shadow: 0 0 18px rgba(212,175,55,.55);
+    background:black;
 }
 
 .avatar img{
     width:100%;
     height:100%;
-    object-fit:cover;             
-    object-position:center 18%;  
-    transform:scale(0.90);       /* تصغير خفيف بدون فراغات */
+    object-fit:cover;              /* ✅ يمنع أي فراغات سوداء */
+    object-position:center 12%;   /* ✅ يظهر الشعر والمنديل والعلم */
+    transform:scale(0.92);        /* ✅ تصغير ذكي بدون فراغ */
 }
 
-/* NAME */
-
-.name{
-    margin:12px 0 4px;
-    font-size:22px;
-    color:#FFD700;
-    position:relative;
+/* ===== Name ===== */
+h1{
+    color:#d4af37;
+    font-size:26px;
+    margin:10px 0 4px;
 }
 
-.stamp{
-    position:absolute;
-    right:-18px;
-    top:-18px;
-    border:2px solid gold;
-    color:gold;
-    font-size:9px;
-    padding:3px 6px;
-    border-radius:50%;
-    transform:rotate(-16deg);
-    animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-    0%,100%{transform:scale(1) rotate(-16deg);}
-    50%{transform:scale(1.1) rotate(-16deg);}
-}
-
-.signature{
-    color:#aaa;
-    font-size:18px;
-}
-
-.role{
-    color:#888;
+.subtitle{
+    color:#ccc;
     font-size:14px;
+    margin-bottom:18px;
 }
 
-/* CONTACT BOX */
-
-.box{
-    background:#141414;
-    color:#fff;
-    margin:7px;
-    padding:7px;
-    border-radius:6px;
-}
-
-/* GRID */
-
-.grid{
+/* ===== Icons Grid ===== */
+.links{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-    margin-top:20px;
-    justify-items:center;
+    grid-template-columns: repeat(3, 1fr);
+    gap:14px;
 }
 
-/* ICONS */
-
-.icon-box{
-    width:100px;
-    height:100px;
-    background:#161616;
-    border-radius:16px;
-    border:1px solid rgba(255,215,0,.15);
+.links a{
+    height:72px;
+    background:linear-gradient(145deg,#151515,#000);
+    border:1px solid rgba(212,175,55,.35);
+    border-radius:18px;
     display:flex;
     flex-direction:column;
-    justify-content:center;
     align-items:center;
-    transition:.25s;
-}
-
-.icon-box:hover{
-    box-shadow:0 0 14px gold;
-    transform:scale(1.05);
-}
-
-.icon{
-    font-size:30px;
-}
-
-.label{
-    margin-top:6px;
+    justify-content:center;
+    text-decoration:none;
+    color:#fff;
     font-size:12px;
-    color:white;
+    box-shadow: inset 0 0 10px rgba(255,255,255,.03);
+    transition:.3s;
 }
 
-a{ text-decoration:none; }
-
-/* MOBILE */
-
-@media(max-width:480px){
-
-.avatar{
-    width:140px;
-    height:140px;
+.links a:hover{
+    transform:scale(1.05);
+    background:
+      linear-gradient(145deg,#222,#000);
 }
 
-.icon-box{
-    width:90px;
-    height:90px;
-}
-
-.icon{
-    font-size:26px;
-}
-
+.links img{
+    width:30px;
+    height:30px;
+    margin-bottom:6px;
 }
 
 </style>
@@ -187,79 +103,58 @@ a{ text-decoration:none; }
 
 <body>
 
-<div class="video-bg">
-    <video autoplay muted loop playsinline>
-        <source src="court.mp4">
-    </video>
-</div>
-
-<div class="overlay"></div>
-
 <div class="card">
 
-<div class="avatar">
-    <img src="hazem.jpg" alt="Hazem Souliman">
-</div>
+    <!-- ===== Avatar ===== -->
+    <div class="avatar">
+        <img src="hazem.jpg" alt="Hazem Souliman">
+    </div>
 
-<div class="name">
-    Hazem Jaber Souliman
-    <span class="stamp">LEGAL VIP</span>
-</div>
+    <!-- ===== Name ===== -->
+    <h1>Hazem Souliman</h1>
+    <div class="subtitle">
+        Lawyer & Legal Consultant
+    </div>
 
-<div class="signature">Hazem Souliman ⚖</div>
-<div class="role">Lawyer & Legal Consultant</div>
+    <!-- ===== Links ===== -->
+    <div class="links">
+        
+        <a href="https://facebook.com">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+            Facebook
+        </a>
 
-<div class="box">📞 +201018167903</div>
-<div class="box">📧 hazemsouliman@yahoo.com</div>
+        <a href="https://instagram.com">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+            Instagram
+        </a>
 
-<div class="grid">
+        <a href="https://wa.me/201000000000">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+            WhatsApp
+        </a>
 
-<a class="icon-box" href="tel:+201018167903">
-    <i style="color:#FFD700;" class="fa-solid fa-phone icon"></i>
-    <span class="label">Call</span>
-</a>
+        <a href="https://linkedin.com">
+            <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png">
+            LinkedIn
+        </a>
 
-<a class="icon-box" href="mailto:hazemsouliman@yahoo.com">
-    <i style="color:#FFD700;" class="fa-solid fa-envelope icon"></i>
-    <span class="label">Email</span>
-</a>
+        <a href="https://t.me/+201018167903">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+            Telegram
+        </a>
 
-<a class="icon-box" href="https://wa.me/+201018167903">
-    <i style="color:#25D366;" class="fa-brands fa-whatsapp icon"></i>
-    <span class="label">WhatsApp</span>
-</a>
+        <a href="https://tiktok.com">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+            TikTok
+        </a>
 
-<a class="icon-box" href="https://www.facebook.com/share/1A8ABN8DUT/">
-    <i style="color:#1877F2;" class="fa-brands fa-facebook icon"></i>
-    <span class="label">Facebook</span>
-</a>
+        <a href="https://x.com">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png">
+            X
+        </a>
 
-<a class="icon-box" href="https://www.instagram.com/prof_hazem_jaber">
-    <i style="color:#E4405F;" class="fa-brands fa-instagram icon"></i>
-    <span class="label">Instagram</span>
-</a>
-
-<a class="icon-box" href="https://www.linkedin.com/in/hazem-souliman-law">
-    <i style="color:#0A66C2;" class="fa-brands fa-linkedin icon"></i>
-    <span class="label">LinkedIn</span>
-</a>
-
-<a class="icon-box" href="https://www.tiktok.com/@prof_hazem_jaber">
-    <i style="color:white;" class="fa-brands fa-tiktok icon"></i>
-    <span class="label">TikTok</span>
-</a>
-
-<a class="icon-box" href="https://x.com/HazemSouliman">
-    <i style="color:#eee;" class="fa-brands fa-x-twitter icon"></i>
-    <span class="label">X</span>
-</a>
-
-<a class="icon-box" href="https://t.me/+201018167903">
-    <i style="color:#229ED9;" class="fa-brands fa-telegram icon"></i>
-    <span class="label">Telegram</span>
-</a>
-
-</div>
+    </div>
 
 </div>
 
