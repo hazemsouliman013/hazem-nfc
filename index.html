@@ -52,11 +52,12 @@ body{
     text-align:center;
 }
 
-/* AVATAR */
+/* AVATAR - التعديلات هنا */
 
 .avatar{
-    width:170px;
-    height:170px;
+    /* ✅ تم زيادة الحجم من 170px إلى 200px */
+    width:200px; 
+    height:200px;
     margin:8px auto 12px;
     border-radius:50%;
     border:4px solid gold;
@@ -68,8 +69,9 @@ body{
 .avatar img{
     width:100%;
     height:100%;
-    object-fit:cover;
-    object-position:center 12%;
+    object-fit:cover;                
+    /* ✅ تم تغيير موضع الصورة من 12% إلى 25% لإظهار تفاصيل البدلة */
+    object-position:center 25%;     
 }
 
 /* NAME */
@@ -122,7 +124,6 @@ body{
 /* GRID */
 
 .grid{
-    /* ✅ 3 أعمدة */
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:12px;
@@ -130,88 +131,68 @@ body{
     justify-items:center;
 }
 
-/* ICONS - تم تعديلها لتصبح أزراراً مستطيلة */
+/* ICONS */
 
 .icon-box{
-    /* ✅ الأبعاد الجديدة */
-    width:100%;
-    height:50px;
-    border-radius:12px;
-    border: none !important;
-    
-    /* ✅ تخطيط أفقي */
+    width:100px;
+    height:100px;
+    background:#161616; /* الخلفية الافتراضية */
+    border-radius:16px;
+    border:1px solid rgba(255,215,0,.15);
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
     transition:.25s;
 }
 
 .icon-box:hover{
-    /* ✅ تأثير الـ hover الجديد */
-    box-shadow:0 0 14px rgba(255,215,0,.6);
+    box-shadow:0 0 14px gold;
     transform:scale(1.05);
 }
 
 .icon{
-    /* ✅ حجم أصغر ومسافة عن النص */
-    font-size:20px;
+    font-size:30px;
     color:white !important; 
-    margin-right: 8px;
 }
 
 .label{
-    /* ✅ تنسيق النص داخل الزر */
-    margin-top:0;
-    font-size:14px;
+    margin-top:6px;
+    font-size:12px;
     color:white;
-    font-weight: bold;
 }
 
 a{ text-decoration:none; }
 
-/* 🎨 ألوان خلفيات الأيقونات الحقيقية (REAL BRAND COLORS) */
-
-.btn-whatsapp { background-color: #25D366; }
-.btn-facebook { background-color: #1877F2; }
-.btn-instagram { 
+/* 🎨 ألوان خلفيات الأيقونات الحقيقية (REAL BRAND COLORS) - كما هي في كودك */
+.whatsapp-bg { background-color: #25D366; border: none; }
+.facebook-bg { background-color: #1877F2; border: none; }
+.instagram-bg { 
     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    border: none; 
 }
-.btn-linkedin { background-color: #0A66C2; }
-.btn-tiktok { background-color: #000000; } 
-.btn-xtwitter { background-color: #000000; } 
-.btn-telegram { background-color: #229ED9; }
+.linkedin-bg { background-color: #0A66C2; border: none; }
+.tiktok-bg { background-color: #000000; border: none; } 
+.xtwitter-bg { background-color: #000000; border: none; } 
+.telegram-bg { background-color: #229ED9; border: none; }
 
-.btn-call { background-color: #28a745; }
-.btn-email { background-color: #dc3545; }
-
-
-/* MOBILE */
+/* MOBILE - التعديلات هنا */
 
 @media(max-width:480px){
 
 .avatar{
-    width:140px;
-    height:140px;
-}
-
-/* ✅ جعل الأزرار تأخذ عرضاً كاملاً في شاشات الموبايل */
-.grid{
-    grid-template-columns:1fr;
-    gap:10px;
+    /* ✅ تم زيادة حجم الصورة على الجوال أيضاً */
+    width:160px;
+    height:160px;
 }
 
 .icon-box{
-    width:100%;
-    height:55px;
+    width:90px;
+    height:90px;
 }
 
 .icon{
-    font-size:24px;
-}
-
-.label{
-    font-size:16px;
+    font-size:26px;
 }
 
 }
@@ -248,53 +229,50 @@ a{ text-decoration:none; }
 
 <div class="grid">
 
-<a class="icon-box btn-facebook" href="https://www.facebook.com/share/1A8ABN8DUT/">
-    <i class="fa-brands fa-facebook icon"></i>
-    <span class="label">Facebook</span>
+<a class="icon-box" href="tel:+201018167903">
+    <i style="color:#FFD700;" class="fa-solid fa-phone icon"></i>
+    <span class="label">Call</span>
 </a>
 
-<a class="icon-box btn-instagram" href="https://www.instagram.com/prof_hazem_jaber">
-    <i class="fa-brands fa-instagram icon"></i>
-    <span class="label">Instagram</span>
-</a>
-
-<a class="icon-box btn-whatsapp" href="https://wa.me/+201018167903">
+<a class="icon-box whatsapp-bg" href="https://wa.me/+201018167903">
     <i class="fa-brands fa-whatsapp icon"></i>
     <span class="label">WhatsApp</span>
 </a>
 
+<a class="icon-box" href="mailto:hazemsouliman@yahoo.com">
+    <i style="color:#FFD700;" class="fa-solid fa-envelope icon"></i>
+    <span class="label">Email</span>
+</a>
+    
+<a class="icon-box facebook-bg" href="https://www.facebook.com/share/1A8ABN8DUT/">
+    <i class="fa-brands fa-facebook icon"></i>
+    <span class="label">Facebook</span>
+</a>
 
-<a class="icon-box btn-linkedin" href="https://www.linkedin.com/in/hazem-souliman-law">
+<a class="icon-box instagram-bg" href="https://www.instagram.com/prof_hazem_jaber">
+    <i class="fa-brands fa-instagram icon"></i>
+    <span class="label">Instagram</span>
+</a>
+
+<a class="icon-box linkedin-bg" href="https://www.linkedin.com/in/hazem-souliman-law">
     <i class="fa-brands fa-linkedin icon"></i>
     <span class="label">LinkedIn</span>
 </a>
 
-<a class="icon-box btn-telegram" href="https://t.me/+201018167903">
-    <i class="fa-brands fa-telegram icon"></i>
-    <span class="label">Telegram</span>
-</a>
-
-<a class="icon-box btn-tiktok" href="https://www.tiktok.com/@prof_hazem_jaber">
+<a class="icon-box tiktok-bg" href="https://www.tiktok.com/@prof_hazem_jaber">
     <i class="fa-brands fa-tiktok icon"></i>
     <span class="label">TikTok</span>
 </a>
 
-
-<a class="icon-box btn-xtwitter" href="https://x.com/HazemSouliman">
+<a class="icon-box telegram-bg" href="https://t.me/+201018167903">
+    <i class="fa-brands fa-telegram icon"></i>
+    <span class="label">Telegram</span>
+</a>
+    
+<a class="icon-box xtwitter-bg" href="https://x.com/HazemSouliman">
     <i class="fa-brands fa-x-twitter icon"></i>
     <span class="label">X</span>
 </a>
-
-<a class="icon-box btn-call" href="tel:+201018167903">
-    <i class="fa-solid fa-phone icon"></i>
-    <span class="label">Call</span>
-</a>
-
-<a class="icon-box btn-email" href="mailto:hazemsouliman@yahoo.com">
-    <i class="fa-solid fa-envelope icon"></i>
-    <span class="label">Email</span>
-</a>
-
 
 </div>
 
