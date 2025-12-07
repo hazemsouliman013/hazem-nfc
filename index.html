@@ -134,7 +134,7 @@ body{
 .icon-box{
     width:100px;
     height:100px;
-    background:#161616;
+    background:#161616; /* الخلفية الافتراضية */
     border-radius:16px;
     border:1px solid rgba(255,215,0,.15);
     display:flex;
@@ -151,6 +151,8 @@ body{
 
 .icon{
     font-size:30px;
+    /* ✅ نجعل كل الأيقونات بيضاء لتناسب الخلفيات الملونة للعلامات التجارية */
+    color:white !important; 
 }
 
 .label{
@@ -160,6 +162,19 @@ body{
 }
 
 a{ text-decoration:none; }
+
+/* 🎨 ألوان خلفيات الأيقونات الحقيقية (REAL BRAND COLORS) */
+.whatsapp-bg { background-color: #25D366; border: none; }
+.facebook-bg { background-color: #1877F2; border: none; }
+.instagram-bg { 
+    /* تدرج لوني لإنستجرام */
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    border: none; 
+}
+.linkedin-bg { background-color: #0A66C2; border: none; }
+.tiktok-bg { background-color: #000000; border: none; } 
+.xtwitter-bg { background-color: #000000; border: none; } 
+.telegram-bg { background-color: #229ED9; border: none; }
 
 /* MOBILE */
 
@@ -223,38 +238,38 @@ a{ text-decoration:none; }
     <span class="label">Email</span>
 </a>
 
-<a class="icon-box" href="https://wa.me/+201018167903">
-    <i style="color:#25D366;" class="fa-brands fa-whatsapp icon"></i>
+<a class="icon-box whatsapp-bg" href="https://wa.me/+201018167903">
+    <i class="fa-brands fa-whatsapp icon"></i>
     <span class="label">WhatsApp</span>
 </a>
 
-<a class="icon-box" href="https://www.facebook.com/share/1A8ABN8DUT/">
-    <i style="color:#1877F2;" class="fa-brands fa-facebook icon"></i>
+<a class="icon-box facebook-bg" href="https://www.facebook.com/share/1A8ABN8DUT/">
+    <i class="fa-brands fa-facebook icon"></i>
     <span class="label">Facebook</span>
 </a>
 
-<a class="icon-box" href="https://www.instagram.com/prof_hazem_jaber">
-    <i style="color:#E4405F;" class="fa-brands fa-instagram icon"></i>
+<a class="icon-box instagram-bg" href="https://www.instagram.com/prof_hazem_jaber">
+    <i class="fa-brands fa-instagram icon"></i>
     <span class="label">Instagram</span>
 </a>
 
-<a class="icon-box" href="https://www.linkedin.com/in/hazem-souliman-law">
-    <i style="color:#0A66C2;" class="fa-brands fa-linkedin icon"></i>
+<a class="icon-box linkedin-bg" href="https://www.linkedin.com/in/hazem-souliman-law">
+    <i class="fa-brands fa-linkedin icon"></i>
     <span class="label">LinkedIn</span>
 </a>
 
-<a class="icon-box" href="https://www.tiktok.com/@prof_hazem_jaber">
-    <i style="color:white;" class="fa-brands fa-tiktok icon"></i>
+<a class="icon-box tiktok-bg" href="https://www.tiktok.com/@prof_hazem_jaber">
+    <i class="fa-brands fa-tiktok icon"></i>
     <span class="label">TikTok</span>
 </a>
 
-<a class="icon-box" href="https://x.com/HazemSouliman">
-    <i style="color:#eee;" class="fa-brands fa-x-twitter icon"></i>
+<a class="icon-box xtwitter-bg" href="https://x.com/HazemSouliman">
+    <i class="fa-brands fa-x-twitter icon"></i>
     <span class="label">X</span>
 </a>
 
-<a class="icon-box" href="https://t.me/+201018167903">
-    <i style="color:#229ED9;" class="fa-brands fa-telegram icon"></i>
+<a class="icon-box telegram-bg" href="https://t.me/+201018167903">
+    <i class="fa-brands fa-telegram icon"></i>
     <span class="label">Telegram</span>
 </a>
 
