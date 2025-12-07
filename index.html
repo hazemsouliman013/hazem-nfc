@@ -8,16 +8,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
 body{
     margin:0;
-    background:
-      linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.88)),
-      url("https://upload.wikimedia.org/wikipedia/commons/2/2b/Scales_of_Justice_02.svg");
-
-    background-size:350px;
-    background-repeat:no-repeat;
-    background-position:center 140px;
     font-family:Arial, sans-serif;
+
+    background:
+        linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.90)),
+        url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1470");
+
+    background-size:cover;
+    background-position:center;
 }
 
 /* ================= CARD ================= */
@@ -27,9 +28,12 @@ body{
     margin:30px auto;
     padding:22px;
 
-    background:#0f0f0f;
+    background:rgba(15,15,15,.9);
+    backdrop-filter:blur(4px);
+
     border-radius:18px;
-    box-shadow:0 0 30px rgba(255,215,0,.15);
+    box-shadow:0 0 36px rgba(255,215,0,.15);
+
     text-align:center;
 }
 
@@ -51,7 +55,7 @@ body{
     color:#FFD700;
 
     border:3px solid gold;
-    box-shadow:0 0 12px gold;
+    box-shadow:0 0 16px gold;
 }
 
 /* ================= NAME ================= */
@@ -109,10 +113,11 @@ body{
 /* ================= GRID ================= */
 
 .grid{
+    margin-top:22px;
+
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:14px;
-    margin-top:22px;
     justify-items:center;
 }
 
@@ -124,7 +129,6 @@ body{
 
     background:rgba(22,22,22,.55);
     backdrop-filter:blur(7px);
-    -webkit-backdrop-filter:blur(7px);
 
     border-radius:14px;
     border:1px solid rgba(255,215,0,.15);
@@ -140,14 +144,13 @@ body{
     position:relative;
 }
 
-/* Hover */
+
 .icon-box:hover{
     transform:scale(1.08);
     background:#1f1f1f;
     box-shadow:0 0 14px rgba(255,215,0,.45);
 }
 
-/* Press */
 .icon-box:active{
     transform:scale(.94);
 }
@@ -156,6 +159,7 @@ body{
 .icon-box::after{
     content:"";
     position:absolute;
+
     top:50%;
     left:50%;
 
@@ -164,8 +168,8 @@ body{
 
     border-radius:50%;
     background:radial-gradient(circle,
-                rgba(255,215,0,.4),
-                transparent 55%);
+        rgba(255,215,0,.45),
+        transparent 60%);
 
     transform:translate(-50%,-50%);
     opacity:0;
@@ -203,13 +207,20 @@ body{
     color:#eee;
 }
 
-/* ================= LAST ROW CENTER ================= */
 
-/* تزحيف الأيقونتين الأخيرتين لنص عمود للداخل */
-.grid > a:nth-last-child(2),
-.grid > a:last-child{
-    transform:translateX(17%);
+/* ================= LAST ROW CENTER PERFECT ================= */
+
+/* الأيقونتين الأخيرتين يتحطوا span عمودين ويتوسّطوا تلقائي */
+.grid > a:nth-last-child(2){
+    grid-column: 1 / span 2;
+    justify-self: center;
 }
+
+.grid > a:last-child{
+    grid-column: 2 / span 2;
+    justify-self: center;
+}
+
 
 </style>
 </head>
@@ -235,43 +246,43 @@ body{
 <div class="grid">
 
 <a class="icon-box" href="tel:+20201018167903">
-    <i class="fa-solid fa-phone icon" style="color:#FFD700"></i>
-    <span class="label">Call</span>
+<i class="fa-solid fa-phone icon" style="color:#FFD700"></i>
+<span class="label">Call</span>
 </a>
 
 <a class="icon-box" href="mailto:hazemsouliman@yahoo.com">
-    <i class="fa-solid fa-envelope icon" style="color:#FFD700"></i>
-    <span class="label">Email</span>
+<i class="fa-solid fa-envelope icon" style="color:#FFD700"></i>
+<span class="label">Email</span>
 </a>
 
 <a class="icon-box" href="https://wa.me/20201018167903">
-    <i class="fa-brands fa-whatsapp icon" style="color:#25D366"></i>
-    <span class="label">WhatsApp</span>
+<i class="fa-brands fa-whatsapp icon" style="color:#25D366"></i>
+<span class="label">WhatsApp</span>
 </a>
 
 <a class="icon-box" href="https://www.facebook.com/share/1A8ABN8DUT/">
-    <i class="fa-brands fa-facebook icon" style="color:#1877F2"></i>
-    <span class="label">Facebook</span>
+<i class="fa-brands fa-facebook icon" style="color:#1877F2"></i>
+<span class="label">Facebook</span>
 </a>
 
 <a class="icon-box" href="https://www.instagram.com/prof_hazem_jaber">
-    <i class="fa-brands fa-instagram icon" style="color:#E4405F"></i>
-    <span class="label">Instagram</span>
+<i class="fa-brands fa-instagram icon" style="color:#E4405F"></i>
+<span class="label">Instagram</span>
 </a>
 
 <a class="icon-box" href="https://www.linkedin.com/in/hazem-souliman-law">
-    <i class="fa-brands fa-linkedin icon" style="color:#0A66C2"></i>
-    <span class="label">LinkedIn</span>
+<i class="fa-brands fa-linkedin icon" style="color:#0A66C2"></i>
+<span class="label">LinkedIn</span>
 </a>
 
 <a class="icon-box" href="https://www.tiktok.com/@prof_hazem_jaber">
-    <i class="fa-brands fa-tiktok icon" style="color:white"></i>
-    <span class="label">TikTok</span>
+<i class="fa-brands fa-tiktok icon" style="color:white"></i>
+<span class="label">TikTok</span>
 </a>
 
 <a class="icon-box" href="https://x.com/HazemSouliman">
-    <i class="fa-brands fa-x-twitter icon" style="color:#eee"></i>
-    <span class="label">X</span>
+<i class="fa-brands fa-x-twitter icon" style="color:#eee"></i>
+<span class="label">X</span>
 </a>
 
 </div>
