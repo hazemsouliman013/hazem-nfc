@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <title>Hazem Jaber Souliman | NFC</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-/* ================= BACKGROUND VIDEO ================= */
+
 body{
     margin:0;
     font-family: Arial, sans-serif;
     background:black;
 }
+
+/* BACKGROUND VIDEO */
 
 .video-bg{
     position:fixed;
@@ -33,28 +39,26 @@ body{
     z-index:-1;
 }
 
-/* ================= MAIN CARD ================= */
+/* MAIN CARD */
+
 .card{
     max-width:420px;
-    margin:30px auto;
-    padding:22px;
+    margin:20px auto;
+    padding:20px;
     background:rgba(15,15,15,.85);
-    backdrop-filter: blur(3px);
+    backdrop-filter:blur(3px);
     border-radius:18px;
     box-shadow:0 0 30px rgba(255,215,0,.25);
     text-align:center;
 }
 
-/* ================= AVATAR ================= */
+/* AVATAR */
+
 .avatar{
     width:110px;
     height:110px;
     margin:auto;
     border-radius:50%;
-    background:linear-gradient(135deg,#222,#000);
-    display:flex;
-    align-items:center;
-    justify-content:center;
     border:3px solid gold;
     box-shadow:0 0 14px gold;
     overflow:hidden;
@@ -64,10 +68,10 @@ body{
     width:100%;
     height:100%;
     object-fit:cover;
-    border-radius:50%;
 }
 
-/* ================= NAME ================= */
+/* NAME */
+
 .name{
     margin:12px 0 4px;
     font-size:22px;
@@ -77,7 +81,7 @@ body{
 
 .stamp{
     position:absolute;
-    right:-16px;
+    right:-18px;
     top:-18px;
     border:2px solid gold;
     color:gold;
@@ -89,13 +93,11 @@ body{
 }
 
 @keyframes pulse{
-    0%,100%{transform:scale(1) rotate(-16deg)}
-    50%{transform:scale(1.08) rotate(-16deg)}
+    0%,100%{transform:scale(1) rotate(-16deg);}
+    50%{transform:scale(1.08) rotate(-16deg);}
 }
 
 .signature{
-    margin-top:4px;
-    font-family:cursive;
     color:#aaa;
     font-size:18px;
 }
@@ -105,29 +107,31 @@ body{
     font-size:14px;
 }
 
-/* ================= CONTACT BOX ================= */
+/* CONTACT BOX */
+
 .box{
     background:#141414;
     color:#fff;
-    margin:8px;
+    margin:7px;
     padding:7px;
     border-radius:6px;
-    box-shadow:0 0 5px rgba(255,215,0,.15);
 }
 
-/* ================= GRID ================= */
+/* GRID */
+
 .grid{
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:14px;
-    margin-top:22px;
+    grid-template-columns:repeat(3,1fr); /* ✅ ثابت 3 × 3 */
+    gap:12px;
+    margin-top:20px;
     justify-items:center;
 }
 
-/* ================= ICON BOX ================= */
+/* ICONS */
+
 .icon-box{
-    width:105px;
-    height:105px;
+    width:100px;
+    height:100px;
     background:#161616;
     border-radius:16px;
     border:1px solid rgba(255,215,0,.15);
@@ -139,82 +143,59 @@ body{
 }
 
 .icon-box:hover{
-    background:#1f1f1f;
-    box-shadow:0 0 14px rgba(255,215,0,.4);
-    transform:scale(1.06);
-}
-
-.icon-box:active{
-    transform:scale(.92);
+    box-shadow:0 0 14px gold;
+    transform:scale(1.05);
 }
 
 .icon{
-    font-size:34px;
+    font-size:30px;
 }
 
 .label{
     margin-top:6px;
     font-size:12px;
-    color:#eee;
+    color:white;
 }
 
-a{
-    text-decoration:none;
+a{ text-decoration:none; }
+
+/* MOBILE TWEAKS */
+
+@media(max-width:480px){
+
+.avatar{
+    width:90px;
+    height:90px;
 }
 
-/* ================= RESPONSIVE ================= */
-@media screen and (max-width: 480px) {
-    .card{
-        margin:20px 10px;
-        padding:16px;
-    }
-    .avatar{
-        width:90px;
-        height:90px;
-        border-width:2px;
-    }
-    .name{
-        font-size:20px;
-    }
-    .signature{
-        font-size:16px;
-    }
-    .role{
-        font-size:13px;
-    }
-    .grid{
-        grid-template-columns: repeat(2, 1fr);
-        gap:12px;
-    }
-    .icon-box{
-        width:90px;
-        height:90px;
-    }
-    .icon{
-        font-size:28px;
-    }
-    .label{
-        font-size:11px;
-    }
+.icon-box{
+    width:90px;
+    height:90px;
 }
+
+.icon{
+    font-size:26px;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
-<!-- VIDEO BACKGROUND -->
 <div class="video-bg">
     <video autoplay muted loop playsinline>
-        <source src="court.mp4" type="video/mp4">
+        <source src="court.mp4">
     </video>
 </div>
 
 <div class="overlay"></div>
 
-<!-- MAIN CARD -->
 <div class="card">
 
 <div class="avatar">
-    <img src="hazem.jpg" alt="Hazem Jaber Souliman">
+    <img src="hazem.jpg">
 </div>
 
 <div class="name">
@@ -228,57 +209,22 @@ a{
 <div class="box">📞 0201018167903</div>
 <div class="box">📧 hazemsouliman@yahoo.com</div>
 
-<!-- ICON GRID -->
 <div class="grid">
 
-<a class="icon-box" href="tel:+20201018167903">
-<i class="fa-solid fa-phone icon" style="color:#FFD700"></i>
-<span class="label">Call</span>
-</a>
+<a class="icon-box" href="tel:+20201018167903"><i style="color:#FFD700;" class="fa-solid fa-phone icon"></i><span class="label">Call</span></a>
+<a class="icon-box" href="mailto:hazemsouliman@yahoo.com"><i style="color:#FFD700;" class="fa-solid fa-envelope icon"></i><span class="label">Email</span></a>
+<a class="icon-box" href="https://wa.me/+201018167903"><i style="color:#25D366;" class="fa-brands fa-whatsapp icon"></i><span class="label">WhatsApp</span></a>
 
-<a class="icon-box" href="mailto:hazemsouliman@yahoo.com">
-<i class="fa-solid fa-envelope icon" style="color:#FFD700"></i>
-<span class="label">Email</span>
-</a>
+<a class="icon-box" href="https://www.facebook.com/share/1A8ABN8DUT/"><i style="color:#1877F2;" class="fa-brands fa-facebook icon"></i><span class="label">Facebook</span></a>
+<a class="icon-box" href="https://www.instagram.com/prof_hazem_jaber"><i style="color:#E4405F;" class="fa-brands fa-instagram icon"></i><span class="label">Instagram</span></a>
+<a class="icon-box" href="https://www.linkedin.com/in/hazem-souliman-law"><i style="color:#0A66C2;" class="fa-brands fa-linkedin icon"></i><span class="label">LinkedIn</span></a>
 
-<a class="icon-box" href="https://wa.me/+201018167903">
-<i class="fa-brands fa-whatsapp icon" style="color:#25D366"></i>
-<span class="label">WhatsApp</span>
-</a>
-
-<a class="icon-box" href="https://www.facebook.com/share/1A8ABN8DUT/">
-<i class="fa-brands fa-facebook icon" style="color:#1877F2"></i>
-<span class="label">Facebook</span>
-</a>
-
-<a class="icon-box" href="https://www.instagram.com/prof_hazem_jaber">
-<i class="fa-brands fa-instagram icon" style="color:#E4405F"></i>
-<span class="label">Instagram</span>
-</a>
-
-<a class="icon-box" href="https://www.linkedin.com/in/hazem-souliman-law">
-<i class="fa-brands fa-linkedin icon" style="color:#0A66C2"></i>
-<span class="label">LinkedIn</span>
-</a>
-
-<a class="icon-box" href="https://www.tiktok.com/@prof_hazem_jaber">
-<i class="fa-brands fa-tiktok icon" style="color:white"></i>
-<span class="label">TikTok</span>
-</a>
-
-<a class="icon-box" href="https://x.com/HazemSouliman">
-<i class="fa-brands fa-x-twitter icon" style="color:#eee"></i>
-<span class="label">X</span>
-</a>
-
-<a class="icon-box" href="https://t.me/+201018167903">
-<i class="fa-brands fa-telegram icon" style="color:#229ED9"></i>
-<span class="label">Telegram</span>
-</a>
+<a class="icon-box" href="https://www.tiktok.com/@prof_hazem_jaber"><i style="color:white;" class="fa-brands fa-tiktok icon"></i><span class="label">TikTok</span></a>
+<a class="icon-box" href="https://x.com/HazemSouliman"><i style="color:#eee;" class="fa-brands fa-x-twitter icon"></i><span class="label">X</span></a>
+<a class="icon-box" href="https://t.me/+201018167903"><i style="color:#229ED9;" class="fa-brands fa-telegram icon"></i><span class="label">Telegram</span></a>
 
 </div>
 
 </div>
-
 </body>
 </html>
