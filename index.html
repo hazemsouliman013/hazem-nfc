@@ -55,19 +55,21 @@ body{
 /* AVATAR */
 
 .avatar{
-    width:110px;
-    height:110px;
-    margin:auto;
+    width:140px;
+    height:140px;
+    margin:5px auto 10px;
     border-radius:50%;
-    border:3px solid gold;
-    box-shadow:0 0 14px gold;
+    border:3.5px solid gold;
+    box-shadow:0 0 18px rgba(255,215,0,.9);
     overflow:hidden;
+    background:#000;
 }
 
 .avatar img{
     width:100%;
     height:100%;
     object-fit:cover;
+    object-position:top center;
 }
 
 /* NAME */
@@ -121,7 +123,7 @@ body{
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr); /* ✅ ثابت 3 × 3 */
+    grid-template-columns:repeat(3,1fr);
     gap:12px;
     margin-top:20px;
     justify-items:center;
@@ -159,13 +161,13 @@ body{
 
 a{ text-decoration:none; }
 
-/* MOBILE TWEAKS */
+/* MOBILE */
 
 @media(max-width:480px){
 
 .avatar{
-    width:90px;
-    height:90px;
+    width:120px;
+    height:120px;
 }
 
 .icon-box{
@@ -195,7 +197,7 @@ a{ text-decoration:none; }
 <div class="card">
 
 <div class="avatar">
-    <img src="hazem.jpg">
+    <img src="hazem.jpg" alt="Hazem Souliman">
 </div>
 
 <div class="name">
@@ -211,20 +213,54 @@ a{ text-decoration:none; }
 
 <div class="grid">
 
-<a class="icon-box" href="tel:+201018167903"><i style="color:#FFD700;" class="fa-solid fa-phone icon"></i><span class="label">Call</span></a>
-<a class="icon-box" href="mailto:hazemsouliman@yahoo.com"><i style="color:#FFD700;" class="fa-solid fa-envelope icon"></i><span class="label">Email</span></a>
-<a class="icon-box" href="https://wa.me/+201018167903"><i style="color:#25D366;" class="fa-brands fa-whatsapp icon"></i><span class="label">WhatsApp</span></a>
+<a class="icon-box" href="tel:+201018167903">
+    <i style="color:#FFD700;" class="fa-solid fa-phone icon"></i>
+    <span class="label">Call</span>
+</a>
 
-<a class="icon-box" href="https://www.facebook.com/share/1A8ABN8DUT/"><i style="color:#1877F2;" class="fa-brands fa-facebook icon"></i><span class="label">Facebook</span></a>
-<a class="icon-box" href="https://www.instagram.com/prof_hazem_jaber"><i style="color:#E4405F;" class="fa-brands fa-instagram icon"></i><span class="label">Instagram</span></a>
-<a class="icon-box" href="https://www.linkedin.com/in/hazem-souliman-law"><i style="color:#0A66C2;" class="fa-brands fa-linkedin icon"></i><span class="label">LinkedIn</span></a>
+<a class="icon-box" href="mailto:hazemsouliman@yahoo.com">
+    <i style="color:#FFD700;" class="fa-solid fa-envelope icon"></i>
+    <span class="label">Email</span>
+</a>
 
-<a class="icon-box" href="https://www.tiktok.com/@prof_hazem_jaber"><i style="color:white;" class="fa-brands fa-tiktok icon"></i><span class="label">TikTok</span></a>
-<a class="icon-box" href="https://x.com/HazemSouliman"><i style="color:#eee;" class="fa-brands fa-x-twitter icon"></i><span class="label">X</span></a>
-<a class="icon-box" href="https://t.me/+201018167903"><i style="color:#229ED9;" class="fa-brands fa-telegram icon"></i><span class="label">Telegram</span></a>
+<a class="icon-box" href="https://wa.me/+201018167903">
+    <i style="color:#25D366;" class="fa-brands fa-whatsapp icon"></i>
+    <span class="label">WhatsApp</span>
+</a>
+
+<a class="icon-box" href="https://www.facebook.com/share/1A8ABN8DUT/">
+    <i style="color:#1877F2;" class="fa-brands fa-facebook icon"></i>
+    <span class="label">Facebook</span>
+</a>
+
+<a class="icon-box" href="https://www.instagram.com/prof_hazem_jaber">
+    <i style="color:#E4405F;" class="fa-brands fa-instagram icon"></i>
+    <span class="label">Instagram</span>
+</a>
+
+<a class="icon-box" href="https://www.linkedin.com/in/hazem-souliman-law">
+    <i style="color:#0A66C2;" class="fa-brands fa-linkedin icon"></i>
+    <span class="label">LinkedIn</span>
+</a>
+
+<a class="icon-box" href="https://www.tiktok.com/@prof_hazem_jaber">
+    <i style="color:white;" class="fa-brands fa-tiktok icon"></i>
+    <span class="label">TikTok</span>
+</a>
+
+<a class="icon-box" href="https://x.com/HazemSouliman">
+    <i style="color:#eee;" class="fa-brands fa-x-twitter icon"></i>
+    <span class="label">X</span>
+</a>
+
+<a class="icon-box" href="https://t.me/+201018167903">
+    <i style="color:#229ED9;" class="fa-brands fa-telegram icon"></i>
+    <span class="label">Telegram</span>
+</a>
 
 </div>
 
 </div>
+
 </body>
 </html>
