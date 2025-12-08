@@ -2,178 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Hazem Jaber Souliman | NFC</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hazem NFC</title>
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:black;
-  color:white;
-  text-align:center;
-}
-
-/* الصورة */
-.avatar{
-  width:220px;               /* ✅ تكبير الدائرة */
-  height:220px;
-  border-radius:50%;
-  border:4px solid gold;
-  box-shadow:0 0 25px gold;
-  overflow:hidden;
-  margin:30px auto 15px;
-}
-.avatar img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center 20%;   /* ✅ إنزال الصورة لتفادي قص الرأس */
-}
-
-/* الاسم */
-h1{
-  color:#FFD700;
-  margin:10px 0 5px;
-}
-h2{
-  color:#aaa;
-  margin:5px 0;
-}
-p{
-  color:#888;
-  margin:0 0 15px;
-}
-
-/* مربعات المعلومات */
-.box{
-  background:#111;
-  color:white;
-  margin:8px auto;
-  padding:10px;
-  border-radius:8px;
-  width:80%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:8px;
-}
-
-/* شبكة الأيقونات */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;            /* ✅ تصغير المسافة بين الصفوف */
-  justify-items:center;
-  margin:22px auto;
-  max-width:400px;
-}
-
-/* شكل الأيقونات */
-.icon-box{
-  width:95px;
-  height:95px;
-  background:#111;
-  border:1px solid rgba(255,215,0,0.2);
-  border-radius:22px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  transition:all .2s ease;
-}
-.icon-box:hover{
-  background:#151515;
-  border:1px solid rgba(255,215,0,0.35);
-  transform:scale(1.05);
-}
-.icon{
-  font-size:30px;
-}
-.label{
-  font-size:13px;
-  margin-top:8px;
-  color:white;
-}
-a{text-decoration:none;}
-
-/* ألوان الأيقونات */
-.fa-whatsapp{color:#25D366;}
-.fa-facebook{color:#1877F2;}
-.fa-instagram{color:#E1306C;}
-.fa-linkedin{color:#0A66C2;}
-.fa-tiktok{color:#fff;}
-.fa-x-twitter{color:#fff;}
-.fa-telegram{color:#229ED9;}
-.fa-phone,.fa-envelope{color:#FFD700;}
-</style>
 </head>
-
 <body>
 
-<div class="avatar">
-  <img src="hazem.jpg" alt="Hazem Souliman">
-</div>
+<div class="page">
 
-<h1>Hazem Jaber Souliman</h1>
-<h2>Hazem Souliman ⚖</h2>
-<p>Lawyer & Legal Consultant</p>
+    <!-- الصورة -->
+    <div class="avatar">
+        <img src="hazem.jpg" alt="Hazem">
+    </div>
 
-<div class="box">
-  <i class="fa-solid fa-phone"></i> +201018167903
-</div>
+    <!-- الاسم -->
+    <h1 class="name">Hazem Gaber Suliman</h1>
 
-<div class="box">
-  <i class="fa-solid fa-envelope"></i> hazemsouliman@yahoo.com
-</div>
+    <!-- البيانات -->
+    <div class="contact">
+        <p><i class="fas fa-phone"></i> +20 101 816 7903</p>
+        <p><i class="fas fa-envelope"></i> hazem@email.com</p>
+    </div>
 
-<div class="grid">
+    <!-- أيقونات -->
+    <div class="grid">
 
-<a class="icon-box" href="tel:+201018167903">
-  <i class="fa-solid fa-phone icon"></i>
-  <span class="label">Call</span>
-</a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/201018167903" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
 
-<a class="icon-box" href="mailto:hazemsouliman@yahoo.com">
-  <i class="fa-solid fa-envelope icon"></i>
-  <span class="label">Email</span>
-</a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
 
-<a class="icon-box" href="https://wa.me/+201018167903">
-  <i class="fa-brands fa-whatsapp icon"></i>
-  <span class="label">WhatsApp</span>
-</a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <!-- لينك التليجرام -->
+        <a href="https://t.me/201018167903" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="#"><i class="fas fa-globe"></i></a>
 
-<a class="icon-box" href="https://www.facebook.com/share/1A8ABN8DUT/">
-  <i class="fa-brands fa-facebook icon"></i>
-  <span class="label">Facebook</span>
-</a>
-
-<a class="icon-box" href="https://www.instagram.com/prof_hazem_jaber">
-  <i class="fa-brands fa-instagram icon"></i>
-  <span class="label">Instagram</span>
-</a>
-
-<a class="icon-box" href="https://www.linkedin.com/in/hazem-souliman-law">
-  <i class="fa-brands fa-linkedin icon"></i>
-  <span class="label">LinkedIn</span>
-</a>
-
-<a class="icon-box" href="https://www.tiktok.com/@prof_hazem_jaber">
-  <i class="fa-brands fa-tiktok icon"></i>
-  <span class="label">TikTok</span>
-</a>
-
-<a class="icon-box" href="https://x.com/HazemSouliman">
-  <i class="fa-brands fa-x-twitter icon"></i>
-  <span class="label">X</span>
-</a>
-
-<a class="icon-box" href="https://t.me/+201018167903">
-  <i class="fa-brands fa-telegram icon"></i>
-  <span class="label">Telegram</span>
-</a>
+    </div>
 
 </div>
 
