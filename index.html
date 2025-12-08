@@ -17,7 +17,7 @@ body{
 
 /* الصورة */
 .avatar{
-  width:180px;               /* ✅ تكبير الدائرة */
+  width:180px;               
   height:180px;
   border-radius:50%;
   border:4px solid gold;
@@ -29,19 +29,20 @@ body{
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center 20%;   /* ✅ إنزال الصورة لتفادي قص الرأس */
+  object-position:center 20%;   
 }
 
-/* الاسم */
-h1{
+/* الاسم والدور */
+.name-title{
   color:#FFD700;
   margin:8px 0 4px;
 }
-h2{
+.signature-style{
   color:#aaa;
   margin:4px 0;
+  font-size: 1.2em;
 }
-p{
+.role-style{
   color:#888;
   margin:0 0 13px;
 }
@@ -64,7 +65,7 @@ p{
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:5px;            /* ✅ تصغير المسافة بين الصفوف */
+  gap:5px;            
   justify-items:center;
   margin:20px auto;
   max-width:400px;
@@ -90,6 +91,7 @@ p{
 }
 .icon{
   font-size:30px;
+  /* ✅ تم إزالة 'color:white !important;' لتطبيق ألوان السوشيال ميديا */
 }
 .label{
   font-size:13px;
@@ -107,6 +109,18 @@ a{text-decoration:none;}
 .fa-x-twitter{color:#fff;}
 .fa-telegram{color:#229ED9;}
 .fa-phone,.fa-envelope{color:#FFD700;}
+
+/* MOBILE */
+@media(max-width:480px){
+  .grid{
+    max-width:100%;
+    gap: 8px; /* تقليل المسافة في الموبايل */
+  }
+  .icon-box{
+    width: 95%; /* زيادة العرض قليلاً لملء المساحة */
+    height: 90px;
+  }
+}
 </style>
 </head>
 
@@ -116,9 +130,9 @@ a{text-decoration:none;}
   <img src="hazem.jpg" alt="Hazem Souliman">
 </div>
 
-<h1>Hazem Jaber Souliman</h1>
-<h2>⚖ Hazem Souliman ⚖</h2>
-<p>Lawyer & Legal Consultant</p>
+<h1 class="name-title">Hazem Jaber Souliman</h1>
+<p class="signature-style">⚖ Hazem Souliman ⚖</p>
+<p class="role-style">Lawyer & Legal Consultant</p>
 
 <div class="box">
   <i class="fa-solid fa-phone"></i> +201018167903
