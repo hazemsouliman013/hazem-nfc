@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(circle at top, #141414, #050505);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.page{
+    text-align: center;
+    max-width: 380px;
+    padding: 35px 20px;
+}
+
+/* الصورة */
+.avatar{
+    width: 170px;
+    height: 170px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #d4af37;
+}
+
+.avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* الاسم */
+.name{
+    margin-top: 15px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* الهاتف والإيميل */
+.contact{
+    margin: 8px 0 20px;
+    line-height: 1.3; /* تقليل المسافة بينهم */
+}
+
+.contact p{
+    margin: 3px 0;
+    opacity: 0.9;
+}
+
+/* شبكة الأيقونات */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* تقليل مسافة الصفوف */
+}
+
+/* الأيقونات */
+.grid a{
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(145deg,#151515,#0a0a0a);
+    border-radius: 16px;
+    text-decoration: none;
+    color: #d4af37;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    transition: .25s ease;
+}
+
+/* Hover */
+.grid a:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px #d4af3740;
+}
+
+/* ضغط مع تموّج */
+.grid a:active{
+    transform: scale(.92);
+    box-shadow: inset 0 0 10px #000;
+}
